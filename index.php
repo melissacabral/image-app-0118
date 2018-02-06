@@ -46,6 +46,7 @@ if( $result->num_rows >= 1 ){
 				<p><?php echo $row['body'] ?></p>
 				<span class="date"><?php echo convert_date($row['date']); ?></span>
 				<span class="comment-count"><?php count_comments( $row['post_id'] ); ?></span>
+				<span class="tags"><?php list_tags( $row['post_id'] ); ?></span>
 			</div>
 		</article>
 		<?php 

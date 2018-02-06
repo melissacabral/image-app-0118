@@ -1,13 +1,12 @@
 TODO
 ====
 
-
 * RSS Feed/ JSON data
 * Add Autocomplete user search
 
 things to try on your own:
 ------
-* Make the tags relate to the posts - add "Junction" table
+
 * helper function to show all the users that like a single post
 * add a way to delete posts if you are logged in as the owner
 * make it pretty 
@@ -59,3 +58,6 @@ DONE
 
 * add edit image page (step 2)
 * Add the edit link to the logged in user's posts
+
+* Make the tags relate to the posts - add "Junction" table
+* Add Posts to the user profile (with 1 query)

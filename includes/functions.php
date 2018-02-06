@@ -252,5 +252,25 @@ function checked( $thing1, $thing2 ){
 	}
 }
 
+/*
+Output a comma separated list of all the tags on any post
+ */
+function list_tags( $post_id = 0 ){
+	global $db;
+	$query = "SELECT tags.name
+				FROM tags, post_tags
+				WHERE tags.tag_id = post_tags.tag_id
+				AND post_tags.post_id = $post_id";
+	$result = $db->query($query);
+	if($result->num_rows >= 1){
+		$tags = array();
+		while($row = $result->fetch_assoc()){
+			$tags[] = $row['name'];
+		}
+		//comma separate the array
+		echo implode(', ', $tags);
+	}
+}
+
 
 //no close php

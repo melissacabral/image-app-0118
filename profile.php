@@ -6,13 +6,25 @@ $user_id = $_GET['user_id'];
 <main class="content">
 
 <?php //get all the info about this user
-$query = 		"SELECT * FROM users WHERE user_id = $user_id LIMIT 1";
+$query = 		"SELECT users.*, posts.*
+				FROM users
+					LEFT JOIN posts
+				    ON ( users.user_id = posts.user_id )
+				WHERE did_confirm = 1
+				AND posts.is_published = 1
+				AND users.user_id = $user_id
+				ORDER BY username ASC
+				LIMIT 10";
 //run it
 $result = $db->query($query);
 //check it - are there rows of data to show?
 if( $result->num_rows >= 1 ){
+	$count = 1;
 	//loop it
 	while( $row = $result->fetch_assoc() ){
+
+		//only show user info if first iteration
+		if($count == 1){
 		?>	
 		<section class="profile-header full-column">
 			<h2 class="user-card">
@@ -21,26 +33,13 @@ if( $result->num_rows >= 1 ){
 			</h2>
 			<p><?php echo $row['bio']; ?></p>
 		</section>
+		<?php }//end if first iteration ?>
 
-
-		<!-- <article>
-			<h2>
-				<?php show_avatar( $row['user_id'], 50 ); ?>
-				<?php echo $row['username']; ?>				
-			</h2>
-			<a href="single.php?post_id=<?php echo $row['post_id']; ?>">
-				<img src="http://<?php echo $row['image']; ?>" alt="<?php echo $row['title'] ?>">
-			</a>
-
-			<div class="post-info">
-				<h3><?php echo $row['title']; ?></h3>
-				<h4><?php echo $row['name']; ?></h4>
-				<p><?php echo $row['body'] ?></p>
-				<span class="date"><?php echo convert_date($row['date']); ?></span>
-				<span class="comment-count"><?php count_comments( $row['post_id'] ); ?></span>
-			</div>
-		</article> -->
+		<a href="single.php?post_id=<?php echo $row['post_id']; ?>">
+			<img src="<?php echo post_image_url($row['image'], 'thumbnail') ?>">
+		</a>
 		<?php 
+		$count ++;
 	} //end while
 	//free it
 	$result->free();
