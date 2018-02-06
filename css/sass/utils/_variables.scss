@@ -1,0 +1,38 @@
+//==color scheme
+$gray:#A18787; 
+$gold: #FFA800;
+$pink: #FD9783;
+$offwhite: #FFFAEC;
+$purple: #90588F;
+
+$pop-color: $pink;
+$hover-color: $gold;
+$page-color: $offwhite;
+$header-color: $gray;
+$heading-text-color:$purple;
+$line-color:lighten($purple,30);
+
+$action-color:$gold;
+
+$subheader-color:rgba($header-color, .5);
+$sidebar-color:rgba($header-color, .1);
+
+$text-color: text-contrast($page-color);
+$link-color: darken(complement($pop-color), 20);
+
+//==feedback colors
+$neutral-feedback: khaki;
+$error-feedback:lightsalmon;
+$success-feedback:palegreen;
+
+//==Breakpoints
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1200px)
+);
+
+//==Typography
+$body-font: "Libre Franklin", "Arial", sans-serif;
+$header-font: Raleway, Arial, sans-serif;
+$gutter: 1rem;
+$line-height:1.4;

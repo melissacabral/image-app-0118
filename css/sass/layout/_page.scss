@@ -1,0 +1,12 @@
+/*
+== Whole Page
+*/
+html{
+	background-color:$page-color;
+	color: $text-color;
+}
+.wrapper{
+	@include respond-to('medium'){
+		@include flexbox();
+	}
+}

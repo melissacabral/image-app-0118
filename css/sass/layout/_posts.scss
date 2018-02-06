@@ -1,0 +1,20 @@
+/*
+==posts
+*/
+.thumbnail-post{
+	text-align: center;	
+	@include flex-grow(1);
+	width:150px;
+	margin: 1%;
+}
+.medium-post{
+	width:200px;
+	//@include flex-grow(1);
+	margin: 1%;
+}
+
+span.tags{
+	display: block;
+	color:$text-color;
+	font-style: italic;
+}

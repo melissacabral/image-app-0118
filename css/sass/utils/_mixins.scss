@@ -1,0 +1,62 @@
+/// Responsive breakpoint manager
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin action($color : $pop-color, $radius:0){
+	color: text-contrast(text-contrast($color));
+	background: $color;  
+	border:none;
+	width:auto;
+	display:block;
+	margin:1em 0;
+	font-family: inherit;
+	cursor: pointer;
+	transition: background .3s ease-out;
+	
+	border-radius: $radius;
+	padding:.5em 1em;
+	
+	box-shadow:0 .25em rgba($line-color,.6);
+	text-shadow:0 1px 0 rgba(text-contrast($color),.5);
+	
+	font-size: 110%;
+}
+
+
+@mixin shadow(){
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(black,.3);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(black,.3);
+	box-shadow: 2px 2px 5px 0px rgba(black,.3);
+}
+@mixin userpic-circle($size:80px){
+	border-radius: 500px;
+	vertical-align: middle;
+	margin-right: $gutter/2;
+	@include shadow;
+	max-width:$size;
+	max-height:$size;
+}
+@mixin gradient($color){
+	background: $color; 
+	background: -webkit-linear-gradient(to right, $color, darken($color, 5)); 
+	background: linear-gradient(to right, $color, darken($color, 5)); 
+}
+

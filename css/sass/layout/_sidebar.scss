@@ -1,0 +1,13 @@
+/*
+== Page Sidebar 
+*/
+.sidebar{
+	padding:$gutter;
+	background-color:$sidebar-color;
+	clear:both;
+	@include respond-to('medium'){
+		width:40%;
+		clear: none;
+		text-align: left;
+	}
+}

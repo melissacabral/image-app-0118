@@ -1,0 +1,49 @@
+html{
+	@include gradient($pop-color);
+}
+body{
+	background-color: $page-color;
+	margin:2*$gutter auto;
+	width:80%;
+	max-width:400px;
+	box-shadow:$gutter/2 $gutter 30px rgba(0,0,0,.2);
+}
+h1{
+	padding:$gutter $gutter 0;
+	color:$heading-text-color;
+}
+.feedback{
+	background-color: lighten($neutral-feedback, 10);
+	border-left:solid $gutter/4 darken($neutral-feedback, 20);
+	padding:$gutter;
+	margin:$gutter $gutter 0;
+}
+footer{
+	padding:$gutter;
+	background-color: rgba(desaturate($pop-color, 30), .5);
+}
+/*
+==form stuff
+ */
+form{
+	padding:$gutter;
+}
+label{
+	display: block;
+	margin:$gutter 0 .2*$gutter;
+}
+input[type=text],
+input[type=password],
+input[type=email]{
+	display: block;
+	width:100%;
+	font-size:120%;
+	padding:.2em;
+	border:solid 1px $line-color;
+	font-family: inherit;
+	outline: none;
+}
+
+input[type=submit]{
+	@include action($gold);
+}

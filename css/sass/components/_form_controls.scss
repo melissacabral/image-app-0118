@@ -1,0 +1,31 @@
+
+/*
+==Forms
+*/
+
+
+
+label{
+	display:block;
+	margin:1em 0 .2em;
+}
+input, textarea, select{
+	width:100%;
+	padding:.25em;
+	font-size:120%;
+}
+[type=checkbox]{
+	width:auto;
+}
+[type=submit]{
+	@include action;
+}
+[type=submit]:hover,
+[type=submit]:focus{
+	background-color:$hover-color ;
+	outline:none;
+}
+textarea{
+	min-height:6em;
+	resize: vertical;
+}

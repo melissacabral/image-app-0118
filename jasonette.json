@@ -1,0 +1,35 @@
+{
+  "$jason": {
+    "head": {
+      "title": "The Title",
+      "description": "The Description"
+    },
+    "body": {
+      "header": {
+        "title" : "Header Title"
+      },
+      "sections": [{
+        "items": [{
+          "type": "label",
+          "text": "Item 1"
+        }, {
+          "type": "label",
+          "text": "Item 2"
+        }, {
+          "type": "label",
+          "text": "Item 3"
+        }, {
+          "type": "label",
+          "text": "Item 4"
+        }, {
+          "type": "label",
+          "text": "Item 5"
+        }]
+      }],
+    
+      "footer": {
+        "textfield":"footer textfield"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/* 
+==Footer 
+*/
+.footer{
+	clear:both;
+	background-color: $subheader-color;
+	color: text-contrast($subheader-color);
+	padding: $gutter;
+	text-align: center;
+}

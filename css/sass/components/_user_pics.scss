@@ -1,0 +1,11 @@
+/* 
+==User Pics
+*/
+img.profile-pic {
+	@include userpic-circle(80px);
+}
+
+.user-card a{
+	text-decoration: none;
+	color:inherit;
+}

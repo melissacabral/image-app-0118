@@ -1,0 +1,33 @@
+
+/*
+== Main content
+*/
+.content{
+	padding:$gutter;	
+	@include respond-to('medium'){
+		width:60%;
+	}
+}
+.grid{
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include justify-content(flex-start);
+	@include align-items(flex-start);
+}
+article{	
+	max-width:400px;
+	margin:0 auto 4em;
+}
+.grid article{
+	// @include flex-grow(1);
+}
+.full-column{
+	width:100%;
+	max-width:none;
+	text-align:center;
+}
+.content img{
+	max-width: 100%;
+	height: auto;
+	@include shadow();
+}

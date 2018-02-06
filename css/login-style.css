@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700|Libre+Franklin");
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 100%; }
+
+ul, li, ol, dt, dd {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+body {
+  font-family: "Libre Franklin", "Arial", sans-serif;
+  line-height: 1.4; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Raleway, Arial, sans-serif; }
+
+html {
+  background: #FD9783;
+  background: -webkit-linear-gradient(to right, #FD9783, #fd826a);
+  background: linear-gradient(to right, #FD9783, #fd826a); }
+
+body {
+  background-color: #FFFAEC;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0.5rem 1rem 30px rgba(0, 0, 0, 0.2); }
+
+h1 {
+  padding: 1rem 1rem 0;
+  color: #90588F; }
+
+.feedback {
+  background-color: #f6f0b9;
+  border-left: solid 0.25rem #e4d232;
+  padding: 1rem;
+  margin: 1rem 1rem 0; }
+
+footer {
+  padding: 1rem;
+  background-color: rgba(234, 164, 150, 0.5); }
+
+/*
+==form stuff
+ */
+form {
+  padding: 1rem; }
+
+label {
+  display: block;
+  margin: 1rem 0 0.2rem; }
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  display: block;
+  width: 100%;
+  font-size: 120%;
+  padding: .2em;
+  border: solid 1px #d0b1cf;
+  font-family: inherit;
+  outline: none; }
+
+input[type=submit] {
+  color: white;
+  background: #FFA800;
+  border: none;
+  width: auto;
+  display: block;
+  margin: 1em 0;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background .3s ease-out;
+  border-radius: 0;
+  padding: .5em 1em;
+  box-shadow: 0 0.25em rgba(208, 177, 207, 0.6);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  font-size: 110%; }
+
+/*# sourceMappingURL=login-style.css.map */

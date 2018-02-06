@@ -1,0 +1,29 @@
+
+/*
+==navigation
+*/
+.main-navigation{
+	background:$subheader-color;
+	min-height:3em;
+
+	.menu{
+		text-align: center;
+
+		@include respond-to('medium'){
+			width:40%;
+			clear: none;
+			text-align: left;
+		}
+		
+		li{
+			display: inline-block;
+		}
+		a{
+			padding:$gutter $gutter/2;
+			color:inherit;
+			text-decoration: none;
+			display: block;
+			font-weight: bold;
+		}
+	}
+}

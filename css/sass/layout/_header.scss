@@ -1,0 +1,29 @@
+/*
+== Site header
+*/
+.header{
+	background-color: $header-color; 
+	color: text-contrast($header-color);
+	position: relative;  
+	text-align: center;
+	h1{
+		font-size:2rem;
+		z-index:999;
+		margin:0;
+		padding:$gutter;
+	}
+	a{
+		color: text-contrast($header-color);
+		text-decoration: none;
+		display: block;
+		padding:1px;
+	}
+}
+.logo{
+	img{
+		max-width:180px;
+		height: auto;
+		margin:.5rem;
+	}
+}
+

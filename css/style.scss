@@ -1,0 +1,66 @@
+@import
+  'sass/vendors/flexbox';
+
+@import 
+	'sass/utils/functions',
+	'sass/utils/mixins',
+	'sass/utils/variables';
+
+@import
+  'sass/base/reset',
+  'sass/base/typography';
+
+@import
+  'sass/layout/page',
+  'sass/layout/header',
+  'sass/layout/navigation',
+  'sass/layout/main_content',
+  'sass/layout/sidebar',
+  'sass/layout/footer',
+  'sass/layout/comments',
+  'sass/layout/posts';
+
+@import
+  'sass/components/form_controls',
+  'sass/components/like_button',
+  'sass/components/links',
+  'sass/components/search_bar',
+  'sass/components/user_pics',
+  'sass/components/feedback',
+  'sass/components/pagination';
+
+// @import
+//   'sass/pages/contact';
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ajax demo additions */
+#display-area{
+	padding: $gutter;
+}
+
+.category-button, .button{
+	@include action;
+}
+
+.category-button:focus{
+	background-color: gray;
+	outline: none;
+}
+
+#display-area.loading{
+	background-color: #eee;
+}
+
+
+

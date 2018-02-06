@@ -1,0 +1,23 @@
+
+.feedback{
+	background-color: $neutral-feedback;
+	padding:$gutter;
+}
+.error{
+	background-color:$error-feedback
+}
+.success{
+	background-color:$success-feedback
+}
+
+#display-area{
+	transition:background .2s ease-out;
+}
+.loading{
+	background:rgba(black, .2);
+
+	&:before{
+		content: "Loading...";
+		display: block;
+	}
+}
